@@ -1,0 +1,47 @@
+@import "variables";
+
+
+// Estilos banners
+
+@mixin estilos-banners{
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  min-height: auto;
+}
+
+@mixin estilos-subtitulos{
+    font-family: "Grand Hotel", cursive;
+    color: $color-titulos;
+}
+
+@mixin items-y-text-aligne{
+    align-items: center;
+    text-align: center;
+}
+
+@mixin content-y-text-aligne{
+    align-content: center;
+    text-align: center;
+}
+
+@mixin iframe{
+    height: 100%;
+    width: 100%;
+}
+
+@mixin h2{
+    font-size: $tamano-h2;
+    color: $color-titulos;
+}
+
+@mixin estilos-h1-banners{
+    font-size: $tamano-h1;
+    margin-bottom: 10px;
+    text-shadow: $text-shadow;
+    font-family: $tipografia-h1;
+    color: $color-titulos;
+}
+

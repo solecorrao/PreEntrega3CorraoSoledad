@@ -1,0 +1,109 @@
+@import "..//utilidades/variables";
+@import "..//utilidades/mixin";
+@import "..//utilidades/extend";
+
+
+main .titulo-principal-productos {
+    background: url(../imagenes/banner__productos.png);
+    @include estilos-banners;
+        h1 {
+       @include estilos-h1-banners;
+    }
+}
+       
+h2 {
+    font-size: $tamano-h2;
+    color: $color-titulos;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.productos-textos {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $color-titulos;
+}
+      .lista-productos {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        font-size: 1.2rem;
+        color: $color-parrafos;
+      
+       li::before {
+        content: "☆";
+      }
+    }
+
+    /*-------------media querys adaptables a responsive TABLET ------*/
+  
+  @media screen and (max-width: 899px) {
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      background: $color-principal
+    }
+
+    .footer-pasteleria {
+        font-size: 0.9rem;
+      }
+    
+      main .titulo-principal-productos {
+         width: 100%;
+      }
+
+}
+
+/*-------------media querys adaptables a responsive MOBILE ------*/
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  main {
+    max-width: 350px;
+    margin: 0 auto;
+    background: #f8ede9;
+  }
+
+  .navbar-toggler-icon {
+    width: 1em;
+    height: 1em;
+  }
+
+
+main .productos-textos {
+  font-size: 3rem;
+}
+
+main .lista-productos {
+  display: flex;
+  align-content: center;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  line-height: 0.5rem;
+  margin: 1rem 0 0 0;
+}
+
+main .bloque-productos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+.img-productos {
+  height: 6rem;
+  width: 6rem;
+}
+}

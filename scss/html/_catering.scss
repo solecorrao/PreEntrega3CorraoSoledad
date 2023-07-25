@@ -1,0 +1,112 @@
+@import "..//utilidades/variables";
+@import "..//utilidades/mixin";
+@import "..//utilidades/extend";
+
+
+.titulo-principal-catering {
+    background: url(../imagenes/banner2.png);
+    @include estilos-banners;
+    h1 {
+        @include estilos-h1-banners;
+    }
+  }
+  
+  .catering-textos {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $color-titulos;
+  }
+
+  .titulo-seccion {
+    margin-top: 0;
+    margin-bottom: $tamano-pequeno
+  }
+  
+  .catering {
+    @extend %flex-column-medio;
+    .parrafo-catering {
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        color: $color-parrafos;
+        line-height: 125%;
+        text-align: center;
+    }
+}
+
+  .catering-img {
+     @extend %flex-column-medio;
+     width: 30vw;
+     box-shadow: $box-shadow;
+  }
+
+  .item-catering {
+    /*aplica a todas las listas de la sección catering*/
+    color: $color-parrafos;
+    line-height: 135%;
+  }
+    
+  div ul li {
+    list-style: none;
+    position: relative;
+    margin: 8px;
+  }
+  
+  main .bloque-lunch,
+  .bloque-pasteleria-dulce,
+  .bloque-sandwiches {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 100vw;
+    margin: 1rem;
+  }
+  
+
+/*-------------media querys adaptables a responsive TABLET ------*/  
+  @media screen and (max-width: 899px) {
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #f8ede9;
+    }
+
+    .parrafo-catering {
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: $color-parrafos;
+      line-height: 125%;
+      text-align: center;
+    }
+  }
+  
+  /*-------------media querys adaptables a responsive MOBILE ------*/  
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  main {
+    max-width: 350px;
+    margin: 0 auto;
+    background: #f8ede9;
+  }
+
+  .navbar-toggler-icon {
+    width: 1em;
+    height: 1em;
+  }
+
+}

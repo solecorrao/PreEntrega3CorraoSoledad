@@ -1,0 +1,52 @@
+//Import de Utilidades
+@import "utilidades/extend";
+@import "utilidades/mixin";
+@import "utilidades/variables";
+
+// Reset
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+  }
+
+
+  // Estilos generales
+  body, main, footer{
+    background-color: $color-principal;
+    }
+
+  .footer-pasteleria {
+    font-size: $tamano-footer;
+    @include items-y-text-aligne;
+    margin-top: 0.5rem;
+    }
+    
+    .boton-personalizado{
+      cursor: pointer;
+      }
+    
+    .texto-footer{
+      margin-bottom: 1rem;
+    }
+  
+  // Estilos barra de navegación Bootstrap
+  .navbar {
+      background-color: $color-contraste;
+      color: $color-parrafos;
+  .navbar-collapse {
+      align-items: center;
+      justify-content: space-between;
+  .nav-link:hover {
+      color: $color-letra-botones;
+    }
+  }
+}
+
+//Import de html
+@import "html/index";
+@import "html/productos";
+@import "html/catering";
+@import "html/promociones";
+@import "html/contacto";

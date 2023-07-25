@@ -1,0 +1,86 @@
+@import "..//utilidades/extend";
+@import "..//utilidades/variables";
+@import "..//utilidades/mixin";
+
+.titulo-principal-contacto {
+    background: url(../imagenes/pastelera1.svg);
+    @include estilos-banners;
+    }
+  
+    h1{
+     @include estilos-h1-banners;
+    //  padding: 2rem;
+          }
+        
+          .subtitulo-pal {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: $color-titulos;
+          }
+          
+  main .formulario {
+    line-height: 2;
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 500px;
+    color: $color-parrafos;
+    fieldset {
+        border: none;
+        padding: $tamano-h2 1rem;
+        border-bottom: 3px solid $color-contraste;
+      }
+  }
+    
+  main .formulario input,
+  textarea {
+    width: 100%;
+    min-height: 2em;
+    color: $color-parrafos;
+    padding: 0.5rem;
+  }
+
+    /*-------------media querys adaptables a responsive TABLET ------*/  
+    @media screen and (max-width: 899px) {
+      main {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #f8ede9;
+      }
+  
+      .titulo-principal-titulo {
+        font-size: 4rem;
+       }
+    
+      .subtitulo-pal {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: $color-titulos;
+      }
+    
+      .formulario {
+        padding: 2rem;
+      }
+    }
+
+    /*-------------media querys adaptables a responsive mobile ------*/  
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  main {
+    max-width: 350px;
+    margin: 0 auto;
+    background: #f8ede9;
+  }
+
+  .navbar-toggler-icon {
+    width: 1em;
+    height: 1em;
+  }
+
+}
+
+    
